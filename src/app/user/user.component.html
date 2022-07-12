@@ -1,15 +1,23 @@
-<nav class="navbar navbar-light p-2" style="background-color: rgb(211, 211, 211)">
+<nav class="navbar navbar-light p-2 border" style="background-color: rgb(211, 211, 211)">
     <input type="checkbox" class="col-1">
     <p class="mb-0 align-self-start col-4">User Details</p>
     <p class="mb-0 align-self-end col">Options</p>
 </nav>
-<div *ngFor="let user of users" class="d-flex p-2 col-5">
-    <div class="col-2 d-flex justify-content-center"><input type="checkbox"></div>
-    <div><img [src]="user.imgUrl" style="border-radius: 50%; width: 100px" class="img-thumbnail img-fluid"></div>
-    <div>
-        <p class="text-primary m-0">{{user.name}}</p>
-        <p class="text-secondary m-0">{{user.email}}</p>
-        <p *ngIf="user.workEmail" class="text-info m-0">{{user.workEmail}}</p>
-        <p class="text-muted m-0">{{user.addedIn}}</p>
+<div *ngFor="let user of users" class="d-flex p-2 border">
+    <div class="col-1 d-flex justify-content-center"><input type="checkbox"></div>
+    <div class="col-4 d-flex">
+        <div><img [src]="user.imgUrl" style="border-radius: 50%; width: 100px" class="img-thumbnail img-fluid"></div>
+        <div>
+            <p class="text-primary m-0">{{user.name}}</p>
+            <p class="text-secondary m-0"><img src="../../assets/img/mail.png" width="20" class="mr-1">{{user.email}}
+            </p>
+            <p *ngIf="user.workEmail" class="text-info m-0"><img src="../../assets/img/open-mail.png" width="15">
+                {{user.workEmail}}</p>
+            <p class="text-muted m-0">{{user.addedIn}}</p>
+        </div>
+    </div>
+    <div class="d-flex align-items-center">
+        <button class="btn btn-primary m-1 px-5">Editar</button>
+        <button class="btn btn-danger px-5">Deletar</button>
     </div>
 </div>
