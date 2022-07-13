@@ -7,6 +7,7 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { AddUserMenuComponent } from './add-user-menu/add-user-menu.component';
 import { RouterModule } from '@angular/router';
 import { ToolbarComponent } from './toolbar/toolbar.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
       {
         path: '', component: UserComponent
       }
-    ])
+    ]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

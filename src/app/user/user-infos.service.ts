@@ -11,6 +11,10 @@ export class UserInfosService {
   retrieveAllUsers(): User[]{
     return USERS;
   }
+
+  addUser(user: User): void{
+    USERS.push(user);
+  }
 }
 
 let USERS: User[] = [
@@ -46,4 +50,4 @@ let USERS: User[] = [
     "newmansnew@theglobe.com",
     "../../assets/img/jnewman.jpg"
   )
-  ]
+]

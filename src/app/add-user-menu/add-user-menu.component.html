@@ -1,11 +1,11 @@
-<form>
+<form class="container">
     <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
+    <input type="text" name="name" id="name" class="form-control" [(ngModel)]="name">
     <label for="email">E-mail</label>
-    <input type="email" name="email" id="email">
+    <input type="email" name="email" id="email" class="form-control" [(ngModel)]="email">
     <label for="img">URL profile image</label>
-    <input type="text" name="img" id="img">
-    <label for="workEmail"></label>
-    <input type="email" name="workEmail" id="workEmail">
-    <input type="button" value="Save">
+    <input type="text" name="img" id="img" class="form-control" [(ngModel)]="imgUrl">
+    <label for="workEmail">Alternative E-mail</label>
+    <input type="email" name="workEmail" id="workEmail" class="form-control" [(ngModel)]="workEmail">
+    <input type="button" value="Save" class="btn btn-primary mt-5" [disabled]="!(name && email && imgUrl)" (click)="addUser()" routerLink="">
 </form>
