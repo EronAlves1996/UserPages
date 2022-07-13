@@ -12,12 +12,20 @@ export class UserInfosService {
     return USERS;
   }
 
+  retrieveUser(userEmail: string): User{
+    return USERS.find(n=>n.email === userEmail) as User;
+  }
+
   addUser(user: User): void{
     USERS.push(user);
   }
 
   deleteUser(userEmail: string): void{
     USERS.splice(USERS.findIndex(n => n.email === userEmail), 1);
+  }
+
+  editUser(user: User, userEmail: string): void{
+    USERS[USERS.findIndex(n=>n.email === userEmail)] = user;
   }
 }
 

@@ -12,7 +12,7 @@
         </div>
     </div>
     <div class="d-flex align-items-center">
-        <button class="btn btn-primary m-1 px-5">Editar</button>
+        <button class="btn btn-primary m-1 px-5" [routerLink]="['/edit-user', user.email]">Editar</button>
         <button class="btn btn-danger px-5" (click)="deleteUser(user.email)">Deletar</button>
     </div>
 </div>

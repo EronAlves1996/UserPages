@@ -1,8 +1,11 @@
-<nav class="navbar navbar-light p-2 border" style="background-color: rgb(211, 211, 211)" *ngIf="route === ''">
+<nav class="navbar navbar-light p-2 border" style="background-color: rgb(211, 211, 211)" *ngIf="route === '';else otherRoute">
     <input type="checkbox" class="col-1">
     <p class="mb-0 align-self-start col-4">User Details</p>
     <p class="mb-0 align-self-end col">Options</p>
 </nav>
-<nav class="navbar navbar-light p-2 border" style="background-color: rgb(211, 211, 211)" *ngIf="route === 'add-user'">
-    <p class="mb-0">Add User</p>
-</nav>
+<ng-template #otherRoute>
+    <nav class="navbar navbar-light p-2 border" style="background-color: rgb(211, 211, 211)">
+        <p class="mb-0" *ngIf="route === 'add-user'">Add User</p>
+        <p class="mb-0" *ngIf="route === 'edit-user'">Edit User</p>
+    </nav>
+</ng-template>

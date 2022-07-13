@@ -24,6 +24,9 @@ import { FormsModule } from '@angular/forms';
         path: 'add-user', component: AddUserMenuComponent
       },
       {
+        path: 'edit-user/:email', component: AddUserMenuComponent
+      },
+      {
         path: '', component: UserComponent
       }
     ]),
