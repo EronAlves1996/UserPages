@@ -15,6 +15,10 @@ export class UserInfosService {
   addUser(user: User): void{
     USERS.push(user);
   }
+
+  deleteUser(userEmail: string): void{
+    USERS.splice(USERS.findIndex(n => n.email === userEmail), 1);
+  }
 }
 
 let USERS: User[] = [

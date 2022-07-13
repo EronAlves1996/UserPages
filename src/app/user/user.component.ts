@@ -25,4 +25,10 @@ export class UserComponent implements OnInit {
     })
   }
 
+  deleteUser(email: string): void {
+    this.userInfo.deleteUser(email);
+    alert("User delete with success!");
+    this.users = this.userInfo.retrieveAllUsers();
+  }
+
 }
