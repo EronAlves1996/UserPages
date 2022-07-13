@@ -6,13 +6,15 @@ import { UserComponent } from './user/user.component';
 import { AddUserComponent } from './add-user/add-user.component';
 import { AddUserMenuComponent } from './add-user-menu/add-user-menu.component';
 import { RouterModule } from '@angular/router';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     AddUserComponent,
-    AddUserMenuComponent
+    AddUserMenuComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
